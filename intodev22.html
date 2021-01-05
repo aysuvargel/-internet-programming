@@ -1,0 +1,52 @@
+let loadState=false;
+function islem(){
+    loadState=true;
+   let html=
+   "<table class='table table-bordered'>"+
+    "<tr>"+
+        "<td>Ad Soyad :</td>"+
+        "<td><input id='username' class='form-control' type='text'></td>"+
+    "</tr>"+
+    "<tr>"+
+        "<td>Bölüm :</td>"+
+        "<td>"+
+            "<select class='form-control' id='episode'>"+
+                "<option>grafik</option>"+
+                "<option>Fizik</option>"+
+                "<option>biyoloji</option>"+
+            "</select>"+
+        "</td>"+
+    "</tr>"+
+    "<tr>"+
+        "<td>Adres :</td>"+
+        "<td><textarea id='adress' style='max-height:100px;min-height:50px;' class='form-control'></textarea></td>"+
+    "</tr>"+
+    "<tr>"+
+        "<td>Cinsiyet</td>"+
+        "<td>"+
+        "<input type='radio' id='male' selected  name='gender' value='erkek' > Erkek "+
+        "<input type='radio' id='female' name='gender' value='kadýn' > Kadýn "+
+        "</td>"+
+    "</tr>"+   
+   "</table>" 
+   ;
+   document.getElementById("result").innerHTML=html;
+}
+function getValue(){
+    if(loadState)
+    {
+        if(confirm("Veriler Gönderilmesini onaylýyormusunuz ?"))
+        {
+            CustomObje={
+                username:document.getElementById('username').value,
+                episode:document.getElementById('episode').value,
+                adress:document.getElementById('adress').value,
+                gender:document.getElementById('male').checked ? "Erkek"  : document.getElementById('female').checked ? "Kadýn" : 'Seçilmedi',
+    
+            };
+            alert(JSON.stringify(CustomObje));    
+        }
+    }else{
+        alert("Lütfen ilk önce formu oluþturun !");
+    }
+}

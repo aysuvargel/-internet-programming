@@ -1,0 +1,74 @@
+<html>
+<head>
+<style type="text/css">
+ul,ol
+{
+list-style:none;
+}
+ol,ul,li
+{
+margin:0; padding:0;
+}
+.menu 
+{
+width:200px;
+}
+.menu a
+{
+color:blue;
+text-decoration:none;
+display:block;
+line-height:25px;
+font-weight:bolder;
+padding-left:10px;
+border-width: 3px;
+border-style: solid;
+border-color: #ccc #888 #555 #bbb;
+}
+.menu a:hover
+{
+color:red;
+background:pink;
+}
+.menu li 
+{
+position:relative;
+background:grey;
+}
+.menu ul 
+{
+display:none;
+position:absolute;
+left:200px;
+top:0px;
+width:200px;
+}
+.menu li:hover > ul 
+{
+display:block;
+}
+
+</style>
+</head>
+	
+<body>
+<ul class="menu">
+<li><a href="https://www.google.com/">Ana Sayfa</a></li>
+<li><a href="#">Google Araçlarý</a>
+<ul>
+<li><a href="https://mail.google.com/mail">Gmail</a></li>
+<li><a href="https://www.google.com.tr/drive">Drive</a></li>
+<li><a href="https://www.google.com.tr/maps">Haritalar</a></li>
+<li><a href="https://photos.google.com/">Fotograflar</a></li>
+<li><a href="https://translate.google.com/">Çeviri</a>
+<ul>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://about.google/intl/tr/">Hakkýnda</a></li>
+<li><a href="https://support.google.com/?hl=tr">Yardým Merkezi</a></li>
+<li><a href="https://www.google.com/contact/">Ýletiþim</a></li>
+</ul>
+</body>
+</html>
